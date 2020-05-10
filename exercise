@@ -1,1 +1,29 @@
-fgsdfgd
+1365. How Many Numbers Are Smaller Than the Current Number
+nums = [8,1,2,2,3]
+class Solution(object):
+    def smallerNumbersThanCurrent(self, nums):
+        
+        result= []
+        count =0
+        length = len(nums)
+        for i in nums:
+            for j in range(length):
+                if i > nums[j]:
+                    count = count+1
+            result.append(count)
+            count =0
+        return result
+1431. Kids With the Greatest Number of Candies
+candies = [2,3,5,1,3], extraCandies = 3
+class Solution(object):
+    def kidsWithCandies(self, candies, extraCandies):
+        Max = max(candies)
+        Result = []
+        for each_candies in candies:
+            if each_candies + extraCandies >= Max:
+                Result.append(True)
+            else:
+                Result.append(False)
+        return Result
+        
+        
