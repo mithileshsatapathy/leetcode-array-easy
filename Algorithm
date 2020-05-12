@@ -1,0 +1,18 @@
+###Sorting List in Asending order
+##num1 = [8,2,4]
+##print(num1)
+##for i in range(len(num1)):
+##    min_val= min(num1[i:])
+##    min_index = num1.index(min_val)
+##    num1[i],num1[min_index]=num1[min_index],num1[i]
+##print(num1)
+
+###Sorting List in Descending order
+##num1 = [8,2,4]
+##print(num1)
+##for i in range(len(num1)):
+##    max_val= max(num1[i:])
+##    max_index = num1.index(max_val)
+##    num1[i],num1[max_index]=num1[max_index],num1[i]
+##print(num1)
+##        
