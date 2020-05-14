@@ -15,4 +15,21 @@
 ##    max_index = num1.index(max_val)
 ##    num1[i],num1[max_index]=num1[max_index],num1[i]
 ##print(num1)
-##        
+###Sorting List in Asending order
+##num = int(input("Enter your list of number :"))
+##num = [34,56,78,89,0,4,3,76,54,12,32]
+##print(num)
+#### First Find the Min of num
+##for i in range(len(num)):
+##    min_val = min(num[i:])
+##    min_ind = num.index(min_val)
+##    num[i],num[min_ind]= num[min_ind],num[i]
+##print (num)
+##
+##num = [34,56,78,89,0,4,3,76,54,12,32]
+##print(num)
+##for i in range(len(num)):
+##    max_val = max(num[i:])
+##    max_ind = num.index(max_val)
+##    num[i],num[max_ind]= num[max_ind],num[i]
+##print(num)
