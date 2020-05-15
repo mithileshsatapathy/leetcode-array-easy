@@ -1,35 +1,93 @@
-###Sorting List in Asending order
-##num1 = [8,2,4]
-##print(num1)
-##for i in range(len(num1)):
-##    min_val= min(num1[i:])
-##    min_index = num1.index(min_val)
-##    num1[i],num1[min_index]=num1[min_index],num1[i]
-##print(num1)
+1.#Sorting List in Asending order
+num1 = [8,2,4]
+print(num1)
+for i in range(len(num1)):
+    min_val= min(num1[i:])
+    min_index = num1.index(min_val)
+    num1[i],num1[min_index]=num1[min_index],num1[i]
+print(num1)
 
-###Sorting List in Descending order
-##num1 = [8,2,4]
-##print(num1)
-##for i in range(len(num1)):
-##    max_val= max(num1[i:])
-##    max_index = num1.index(max_val)
-##    num1[i],num1[max_index]=num1[max_index],num1[i]
-##print(num1)
-###Sorting List in Asending order
-##num = int(input("Enter your list of number :"))
-##num = [34,56,78,89,0,4,3,76,54,12,32]
-##print(num)
-#### First Find the Min of num
-##for i in range(len(num)):
-##    min_val = min(num[i:])
-##    min_ind = num.index(min_val)
-##    num[i],num[min_ind]= num[min_ind],num[i]
-##print (num)
-##
-##num = [34,56,78,89,0,4,3,76,54,12,32]
-##print(num)
-##for i in range(len(num)):
-##    max_val = max(num[i:])
-##    max_ind = num.index(max_val)
-##    num[i],num[max_ind]= num[max_ind],num[i]
-##print(num)
+2.#Sorting List in Descending order
+num1 = [8,2,4]
+print(num1)
+for i in range(len(num1)):
+    max_val= max(num1[i:])
+    max_index = num1.index(max_val)
+    num1[i],num1[max_index]=num1[max_index],num1[i]
+print(num1)
+
+3.### Sorting with Ascending with duplicate values
+num = [34,35,43,65,47,6,97,76,58,8,0,9,9,9,9,9]
+print("Unsorted ", num)
+for i in range(len(num)-1):
+    min_val= min(num[i:])
+    min_ind = num.index(min_val,i)
+    if num[i] != num[min_ind]:
+        num[i],num[min_ind] = num[min_ind],num[i]
+print("Sorted   ", num)
+
+4.#### Sorting with descending with duplicate values    
+num = [34,35,43,65,47,6,97,76,58,8,0,9,9,9,9,9]
+print("Unsorted ", num)
+for i in range (len(num)-1):
+    max_val = max(num[i:])
+    max_ind = num.index(max_val,i)
+    if num[i] != num[max_ind]:
+        num[i],num[max_ind] = num[max_ind],num[i]
+print ("Sorted   ", num)
+
+5.#### Sorting with Ascending with duplicate values without min method
+num = [34,35,43,65,47,6,97,76,58,8,0,9,9,9,9,9]
+print ("Unsorted ", num)
+for i in range(len(num)-1):
+    min_val = num[i]
+    for j in range (i+1,len(num)):
+        if num[j] < min_val:
+            min_val = num[j]
+    min_ind = num.index(min_val,i)
+    if num[i] != num[min_ind]:
+        num[i],num[min_ind] = num[min_ind],num[i]
+print("Sorted   ", num)
+
+6.### Sorting with Descending with duplicate values without min method
+num = [34,35,43,65,47,6,97,76,58,8,0,9,9,9,9,9]
+print ("Unsorted ", num)
+for i in range(len(num)-1):
+    max_val = num[i]
+    for j in range (i+1,len(num)):
+        if num[j] > max_val:
+            max_val = num[j]
+    max_ind = num.index(max_val,i)
+    if num[i] != num[max_ind]:
+        num[i],num[max_ind] = num[max_ind],num[i]
+print("Sorted   ", num)
+
+7.### Sorting with Ascending with duplicate values without min method and with User Input
+user_data = int(input("How Many Numbers You want to enter:"))
+num = [int(input("Enter your Number :") )for x in range (user_data)]
+print("Unsorted ", num)
+for i in range(len(num)-1):
+    min_val = num[i]
+    for j in range(i+1,len(num)):
+        if num[j] < min_val:
+            min_val = num[j]
+    min_ind = num.index(min_val,i)
+    if num[i] != num[min_ind]:
+        num[i],num[min_ind] = num[min_ind],num[i]
+print ("Sorted   ", num)
+
+##8.### Sorting with Descending with duplicate values without min method and with User Input
+user_data = int(input("How many nm=umbers you want to enter:"))
+num= [int(input("Enter your Number: ")) for x in range (user_data)]
+print("Unsorted ", num)
+for i in range (len(num)-1):
+    max_val = num[i]
+    for j in range (i+1,len(num)):
+        if num[j] > max_val:
+            max_val = num[j]
+    max_ind= num.index(max_val,i)
+    if num[i] !=num[max_ind]:
+        num[i],num[max_ind] = num[max_ind],num[i]
+print ("Sorted   ", num)
+
+
