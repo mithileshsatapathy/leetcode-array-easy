@@ -36,4 +36,15 @@ for i in range (len(arr)-1):
             output.append(max_val)
         output.append(-1)
         
+344. Reverse String 
+ 
+name = ['M','i','t','h','i','l','e','s','h']
+last_index = len(name)-1
+last_letter = []
+while last_index >=0:
+    last_letter += name[last_index]
+    last_index = last_index -1
+print (last_letter)
+
+
         
