@@ -1,0 +1,25 @@
+Amazon- QAE Interview - 
+
+# Write a function in any language that will print "AN" if a number is divisible by 8, "ANIM" 
+if divisible by 16 and "ANIMAL" if divisible by 32. 
+
+Solution with User Input Data with Exceptional Handling
+
+user_data = int(input("Enter your Number :"))
+def number_divisible(user_data):
+    try:
+        num = int(user_data)
+        print("Proceed")
+        if num %32 ==0:
+            print("ANIMAL")
+        elif num %16 ==0:
+            print("ANIM")
+        elif num % 8 ==0:
+            print("AN")
+        else:
+            print("This number is not divisible by 8 or 16 or 32")
+    except:
+        print("Please Enter valid Number")
+
+number_divisible(user_data)
+
