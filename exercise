@@ -38,13 +38,13 @@ for i in range (len(arr)-1):
         
 344. Reverse String 
  
-name = ['M','i','t','h','i','l','e','s','h']
-last_index = len(name)-1
-last_letter = []
-while last_index >=0:
-    last_letter += name[last_index]
-    last_index = last_index -1
-print (last_letter)
+s = ['M','i','t','h','i','l','e','s','h']
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        left, right = 0, len(s) - 1
+        while left < right:
+            s[left], s[right] = s[right], s[left]
+            left, right = left + 1, right - 1
 
 13. Roman to Integer
 class Solution(object):
